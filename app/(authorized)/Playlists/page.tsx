@@ -15,7 +15,7 @@ import { message } from 'antd';
 export default function Home() {
   const [userId , setUserId] = useState<null|Number>(null);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
-  const [errorType, setErrorType] = useState<'string' | 'success' | 'error'>('string');
+  const [errorType, setErrorType] = useState< "string" | 'success' | 'error'>('string');
 
   const deletePlaylist = async () => {
     if (userId === null) return; 
@@ -42,7 +42,7 @@ export default function Home() {
         <PopUps title={'Delete Playlist'} message={'Are you sure you want to delete'} target={'Fav Songs?'} buttonTitle={'Delete'} onCancelClick={()  => setUserId(null)} />
         </div>
       }
-      <div className={styles.searchh} >
+      <div className={styles.srch} >
       <Search/>
       </div>
       <div className={styles.tbl} >
@@ -332,9 +332,7 @@ export default function Home() {
           ]
         }/>
       </div>
-      {errorMessage && (
-        <ErrorPopUp message={errorMessage} type={errorType} />
-      )}
+      
     </main>
   );
     
