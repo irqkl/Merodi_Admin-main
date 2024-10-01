@@ -1,5 +1,6 @@
 .wrapper {
     display: flex;
+    flex-shrink: 0;
 
     .container {
         background-color: #fff;
